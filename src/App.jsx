@@ -1,0 +1,48 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Products from "./pages/Products";
+import Cart from "./pages/Cart";
+import Orders from "./pages/Orders";
+import Profile from "./pages/Profile";
+import Footer from "./components/Footer";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="min-h-screen bg-gray-100">
+
+        <Navbar />
+
+        <main className="max-w-7xl mx-auto px-6 py-10">
+          <Routes>
+
+            <Route path="/" element={<Home />} />
+
+            <Route path="/login" element={<Login />} />
+
+            <Route path="/register" element={<Register />} />
+
+            <Route path="/products" element={<Products />} />
+
+            <Route path="/cart" element={<Cart />} />
+
+            <Route path="/orders" element={<Orders />} />
+
+            <Route path="/profile" element={<Profile />} />
+
+          </Routes>
+        </main>
+
+        <Footer />
+
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
